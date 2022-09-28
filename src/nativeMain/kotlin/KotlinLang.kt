@@ -33,7 +33,7 @@ class KotlinLang(escolha: String) {
                 "[x]  Expressões lambdas e funções anônimas -> (https://www.geeksforgeeks.org/kotlin-lambdas-expressions-and-anonymous-functions/)",
                 "[x]  Kotlin Inline -> (https://www.geeksforgeeks.org/kotlin-inline-functions/)",
                 "[x]  Notação da função de infixo Kotlin -> (https://www.geeksforgeeks.org/kotlin-infix-function-notation/)",
-                "[x]  Kotlin Funções de Ordem Superior -> (https://www.geeksforgeeks.org/kotlin-higher-order-functions/)",
+                "[x]  Kotlin Funções de Ordem Superior -> (https://www.geeksforgeeks.org/kotlin-higher-order-functions/)"
             ),
             "Coleções Kotlin" to listOf(
                 "[x]  Coleções Kotlin -> (https://www.geeksforgeeks.org/kotlin-collections/)",
@@ -143,8 +143,8 @@ class KotlinLang(escolha: String) {
 
             val index = temas?.let { Random.nextInt(it.size) }
             println(index?.let { "=".repeat(temas[it].length) })
-            println("          $escolha")
-            println("------------------------------------")
+            println("${index?.let { " ".repeat(temas[it].length/2) }}$escolha")
+            println(index?.let { "-".repeat(temas[it].length) })
             print("Tema Sugerido: ")
             println(index?.let { temas[it] })
             println(index?.let { "=".repeat(temas[it].length) })
